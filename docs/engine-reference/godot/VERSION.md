@@ -2,10 +2,10 @@
 
 | Field | Value |
 |-------|-------|
-| **Engine Version** | Godot 4.6 |
+| **Engine Version** | Godot 4.6.1 |
 | **Release Date** | January 2026 |
-| **Project Pinned** | 2026-02-12 |
-| **Last Docs Verified** | 2026-02-12 |
+| **Project Pinned** | 2026-03-26 |
+| **Last Docs Verified** | 2026-03-26 |
 | **LLM Knowledge Cutoff** | May 2025 |
 
 ## Knowledge Gap Warning

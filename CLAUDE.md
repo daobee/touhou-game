@@ -5,11 +5,11 @@ Each agent owns a specific domain, enforcing separation of concerns and quality.
 
 ## Technology Stack
 
-- **Engine**: [CHOOSE: Godot 4 / Unity / Unreal Engine 5]
-- **Language**: [CHOOSE: GDScript / C# / C++ / Blueprint]
+- **Engine**: Godot 4.6.1
+- **Language**: GDScript (primary), C++ via GDExtension (performance-critical)
 - **Version Control**: Git with trunk-based development
-- **Build System**: [SPECIFY after choosing engine]
-- **Asset Pipeline**: [SPECIFY after choosing engine]
+- **Build System**: Godot Editor + Export Templates
+- **Asset Pipeline**: Godot Import Dock + Custom Resource Pipeline
 
 > **Note**: Engine-specialist agents exist for Godot, Unity, and Unreal with
 > dedicated sub-specialists. Use the set matching your engine.
@@ -41,6 +41,18 @@ Every task follows: **Question -> Options -> Decision -> Draft -> Approval**
 - No commits without user instruction
 
 See `docs/COLLABORATIVE-DESIGN-PRINCIPLE.md` for full protocol and examples.
+
+## Version Control (Git)
+
+**All file modifications MUST go through Git version control.**
+
+- Every significant change (new feature, system design, config update) must be committed
+- Commits must reference the relevant design document or task ID
+- Use trunk-based development on `main` branch for solo development
+- Create feature branches only for large, multi-session changes
+- Commit message format: `<scope>: <description>` (e.g., `gdd: add Touhou Blaster Master concept`)
+- Before starting new work, ensure working tree is clean (commit or stash pending changes)
+- Run `git status` to verify changes before committing
 
 > **First session?** If the project has no engine configured and no game concept,
 > run `/start` to begin the guided onboarding flow.
